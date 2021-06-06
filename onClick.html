@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=t, initial-scale=1.0">
+    <title>onClick</title>
+</head>
+<body>
+    <input type="button" onMouseOut="alert('this is on mouse out event')" value="Button">
+    <div onMouseOver="over()" onMouseOut="out()">Hello World</div>
+    <script>
+        function out() {
+            document.write("mouse out");
+        }
+        function over() {
+            document.write("mouse over");
+        }
+    </script>
+</body>
+</html>

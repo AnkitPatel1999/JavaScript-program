@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritanceAndSuperKeyword</title>
+</head>
+<body>
+    <script>
+        class car {
+            setname(name) {
+                this.name = name;
+            }
+            startEngine(){
+                document.write("engin started for "+this.name+"<br>");
+            }
+            stopEngine(){
+                document.write("engin stopped for "+this.name+"<br>");
+            }
+        }
+        class Toyota extends car{
+            topSpeed(speed){
+                document.write("top speed for "+this.name+" is "+speed+"<br>");
+            }
+            startEngine(){
+                document.write("engin started for child class"+"<br>")
+            }
+        }
+
+        let mycar = new Toyota();
+        mycar.setname("Fortuner");
+        mycar.startEngine();
+        mycar.stopEngine();
+        mycar.topSpeed(250);
+    </script>
+
+    <script>
+        class Bike{
+            constructor() {
+                this.company = "Honda";
+            }
+        }
+        class Vehicle extends Bike{
+            constructor(name,price) {
+                super();
+                this.name = name;
+                this.price = price;
+            }
+        }
+        var v = new Vehicle("Honda Activa","800");
+        document.write(v.company+" <br>"+ v.name+"<br>"+v.price)
+    </script>
+</body>
+</html>

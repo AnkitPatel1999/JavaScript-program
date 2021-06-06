@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototypesAndPrototypicalInheritance</title>
+</head>
+<body>
+
+    <script>
+        const person={
+            firstname: 'bob',
+            lastname: 'dennis',
+            getFullName(){
+                return "${this.firstname} ${this.lastname}";
+            }
+        }
+        const developer={
+            firstname: 'John',
+            lastname: 'david',
+        }
+        
+        developer.__proto__ =person;
+        person.getFullName();
+        developer.getFullName();
+    </script>
+
+    <script>
+        function bike(company){
+            this.company = company;
+        }
+        bike.prototype.getCompany = function(){
+            return this.company
+        }
+        function Vehicle(name,price){
+            this.name = name;
+            this.price = price;
+        }
+
+        var bike = new bike("Honda");
+        Vehicle.prototype=bike;
+        var vehicle = new Vehicle("shine","800");
+        document.write(vehicle.getCompany()+" : "+vehicle.name+" : "+vehicle.price )
+    </script>
+</body>
+</html>

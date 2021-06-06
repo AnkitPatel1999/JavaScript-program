@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructorAndClass</title>
+</head>
+<body>
+    <p id="x">hii</p>
+    <script>
+        function human(first,last,age) {
+            this.firstname = first;
+            this.lastname = last;
+            this.age = age;
+        }
+        var father =new human('zaversinh','patel',45);
+        document.getElementById("x").innerHTML =  "My father is "+father.age+".";
+    </script>
+
+    <script>
+        class Employee {
+            constructor(id,name) {
+                this.id = id;
+                this.name = name;
+            }
+            detailsemployee(){
+                document.write(this.id+"  "+this.name+"<br>");
+            }
+        }
+        var emp1 = new Employee(1,"bob");
+        var emp2 = new Employee(2,"john");
+        emp1.detailsemployee();
+        emp2.detailsemployee();
+    </script>
+</body>
+</html>

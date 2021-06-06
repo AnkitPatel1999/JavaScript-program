@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focusEvent</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" placeholder="Username" id="">
+        <input type="password" placeholder="Password" id="">
+    </form>
+    <script>
+        const password = document.querySelector('input[type=password]');
+        password.addEventListener('focus',(e) => {
+            e.target.style.backgroundColor = "blue"
+        })
+        password.addEventListener('blur',(e) => {
+            e.target.style.backgroundColor = ""
+        })
+    </script>
+</body>
+</html>

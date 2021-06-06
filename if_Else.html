@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF_ELSE</title>
+</head>
+<body>
+    <form name="myForm" action="#">
+        Enter your marks : <input type="text" name="textbox1" value="">
+        <input type="button" onclick="checkGrades()" value="Check Your Grade">
+    </form>
+    <script>
+        function checkGrades(){
+            if(document.myForm.textbox1.value>=90) {
+                alert("Grade A+");
+            }else if(document.myForm.textbox1.value>=80 && document.myForm.textbox1.value<90) {
+                    alert("Grade A");
+            } else if(document.myForm.textbox1.value >= 70 && 
+                    document.myForm.textbox1.value< 80) {
+                    alert("Grade B");
+            } else {
+                alert("Grade C "+document.myForm.textbox1.value);
+            }
+        }
+    </script>
+    
+</body>
+</html>
